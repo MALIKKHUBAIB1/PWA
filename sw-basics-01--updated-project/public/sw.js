@@ -3,8 +3,6 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("[Service Worker] Activating...");
-  console.log("Event:", event);
   event.waitUntil(self.clients.claim()); // Claim clients
 });
 
